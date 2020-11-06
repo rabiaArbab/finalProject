@@ -3,6 +3,7 @@
 const cartBtn = document.querySelector('.cart-btn');
 const closeCartBtn = document.querySelector('.close-cart');
 const clearCartBtn = document.querySelector('.clear-cart');
+const checkOutBtn = document.querySelector('.check-out');
 const cartDOM = document.querySelector('.cart');
 const cartOverlay = document.querySelector('.cart-overlay');
 const cartItems = document.querySelector('.cart-items');
@@ -196,7 +197,7 @@ class UI{
 class Storage{
     static saveProducts(products){
         localStorage.setItem("products",JSON.stringify(products));
-    }
+    } 
     static getProduct(id){
         let products = JSON.parse(localStorage.getItem('products'));
         return products.find(product => product.id === id);
